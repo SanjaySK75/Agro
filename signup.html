@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page - AGRO</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <section>
+    </section>
+    <h1 class="two"></h1>
+    <img src="agro logo.png" alt="AGRO Logo">  
+    <div class="center">
+        <h1>Welcome to AGRO!</h1>
+        <h2>Signup</h2>
+        <form id="signForm" method="post">
+          <div class="txt_field">
+            <input type="text" id="name" required>
+            <span></span>
+            <label>Name</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="number" id="age" required>
+            <span></span>
+            <label>Age</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="email" id="email" required>
+            <span></span>
+            <label>Email</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="text" id="username" required>
+            <span></span>
+            <label>Username</label>
+          </div>
+
+          <div class="txt_field">
+            <input type="password" id="password" required>
+            <span></span>
+            <label>Password</label>
+          </div>
+
+          <input type="submit" value="Signup">
+          <div class="signup_link">
+            Already registered? <a href="login.html">Login</a>
+          </div>
+        </form>
+    </div>
+
+    <script>
+      // JavaScript code to handle signup form submission
+      document.getElementById("signForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Prevent the form from submitting the normal way
+        
+        // Get values from the input fields
+        const name = document.getElementById("name").value;
+        const age = document.getElementById("age").value;
+        const email = document.getElementById("email").value;
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Basic validation (you can add more complex logic)
+        if (name && age && email && username && password) {
+          alert("Signup successful! Redirecting to the homepage...");
+          window.location.href = "agro.html"; // Redirect to the home page or dashboard
+        } else {
+          alert("Please fill in all fields correctly.");
+        }
+      });
+    </script>
+</body>
+</html>
